@@ -7,7 +7,7 @@ import (
 	"log"
 )
 
-func main1() {
+func main() {
 	client, err := ethclient.Dial("https://cloudflare-eth.com")
 	if err != nil {
 		log.Fatal(err)
@@ -16,7 +16,7 @@ func main1() {
 	fmt.Println("we have a connection")
 	_ = client // we'll use this in the upcoming sections
 
-	address := common.HexToAddress("0x71c7656ec7ab88b098defb751b7401b5f6d8976f")
+	address := common.HexToAddress("0x6782E7e24814eebd1e9147babfA7125a219C1EF6")
 
 	fmt.Println(address.Hex()) // 0x71C7656EC7ab88b098defB751B7401B5f6d8976F
 	//fmt.Println(address.Hash().Hex()) // 0x00000000000000000000000071c7656ec7ab88b098defb751b7401b5f6d8976f
