@@ -1,4 +1,4 @@
-package main
+package ginserver
 
 import (
 	"net/http"
@@ -10,7 +10,7 @@ var db = make(map[string]string)
 
 func setupRouter() *gin.Engine {
 	// Disable Console Color
-	// gin.DisableConsoleColor()
+	// ginserver.DisableConsoleColor()
 	r := gin.Default()
 
 	// Ping test
@@ -29,10 +29,10 @@ func setupRouter() *gin.Engine {
 		}
 	})
 
-	// Authorized group (uses gin.BasicAuth() middleware)
+	// Authorized group (uses ginserver.BasicAuth() middleware)
 	// Same than:
 	// authorized := r.Group("/")
-	// authorized.Use(gin.BasicAuth(gin.Credentials{
+	// authorized.Use(ginserver.BasicAuth(ginserver.Credentials{
 	//	  "foo":  "bar",
 	//	  "manu": "123",
 	//}))
@@ -67,7 +67,7 @@ func setupRouter() *gin.Engine {
 	return r
 }
 
-func start() {
+func Start() {
 	r := setupRouter()
 	// Listen and Server in 0.0.0.0:8080
 	r.Run(":8080")

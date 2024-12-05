@@ -2,28 +2,27 @@ package main
 
 import (
 	"fmt"
-	"github.com/nishaodong/go_study/eth"
-	"github.com/nishaodong/go_study/gin"
+	"go_study/eth"
+	"go_study/pkg1"
 )
 
+//TIP <p>To run your code, right-click the code and select <b>Run</b>.</p> <p>Alternatively, click
+// the <icon src="AllIcons.Actions.Execute"/> icon in the gutter and select the <b>Run</b> menu item from here.</p>
+
 func main() {
-	const name string = "Tom"
-	fmt.Println(name)
+	//TIP <p>Press <shortcut actionId="ShowIntentionActions"/> when your caret is at the underlined text
+	// to see how GoLand suggests fixing the warning.</p><p>Alternatively, if available, click the lightbulb to view possible fixes.</p>
+	s := "gopher"
+	fmt.Println("Hello and welcome, %s!", s)
 
-	const age = 30
-	fmt.Println(age)
+	for i := 1; i <= 5; i++ {
+		//TIP <p>To start your debugging session, right-click your code in the editor and select the Debug option.</p> <p>We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
+		// for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.</p>
+		fmt.Println("i =", 100/i)
+	}
 
-	const name_1, name_2 string = "Tom", "Jay"
-	fmt.Println(name_1, name_2)
-
-	const name_3, age_1 = "Tom", 30
-	fmt.Println(name_3, age_1)
-
-	fmt.Print("输出到控制台不换行")
-	fmt.Println("---")
-	fmt.Println("输出到控制台并换行")
-	fmt.Printf("name=%s,age=%d\n", "Tom", 30)
-	fmt.Printf("name=%s,age=%d,height=%v\n", "Tom", 30, fmt.Sprintf("%.2f", 180.567))
-
-	ginServer.start()
+	pkg1.Lib1Test()
+	//ginserver.Start()
+	//eth.Conn_client()
+	eth.AccountBalance()
 }
