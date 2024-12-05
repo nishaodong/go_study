@@ -5,8 +5,8 @@ func read_erc20() {
 	//if err != nil {
 	//	log.Fatal(err)
 	//}
-
-	// Golem (GNT) Address
+	//
+	////Golem (GNT) Address
 	//tokenAddress := common.HexToAddress("0xa74476443119A942dE498590Fe1f2454d7D4aC0d")
 	//instance, err := token.NewToken(tokenAddress, client)
 	//if err != nil {
@@ -33,16 +33,16 @@ func read_erc20() {
 	//if err != nil {
 	//	log.Fatal(err)
 	//}
-
+	//
 	//fmt.Printf("name: %s\n", name)         // "name: Golem Network"
 	//fmt.Printf("symbol: %s\n", symbol)     // "symbol: GNT"
 	//fmt.Printf("decimals: %v\n", decimals) // "decimals: 18"
-
+	//
 	//fmt.Printf("wei: %s\n", bal) // "wei: 74605500647408739782407023"
 	//
 	//fbal := new(big.Float)
 	//fbal.SetString(bal.String())
 	//value := new(big.Float).Quo(fbal, big.NewFloat(math.Pow10(int(decimals))))
-
+	//
 	//fmt.Printf("balance: %f", value) // "balance: 74605500.647409"
 }
